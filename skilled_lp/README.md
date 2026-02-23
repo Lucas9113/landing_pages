@@ -43,4 +43,4 @@ This project is a fully responsive landing page developed using a **Mobile First
 
 ### 🌐 View Online
 **You can see the project live on GitHub Pages:**
-- [Skilled Landing Page](https://lucas9113.github.io/header_proyects_css/landing_pages/skilled_lp/dist/)
+- [Skilled Landing Page](https://lucas9113.github.io/landing_pages/skilled_lp/dist/)
