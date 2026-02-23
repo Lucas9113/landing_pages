@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Set box-sizing to border-box for all elements
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    min-height: 100vh;
+    @include breakpoint(tablet) {
+        background-image: url(../src/assets/hero-img.png);
+        background-repeat: no-repeat;
+        background-position: 120% 0%;
+        background-size: 380px;
+            
+    }
+
+     @include breakpoint(tablethorizontal) {
+        background-image: url(../src/assets/hero-img.png);
+        background-repeat: no-repeat;
+        background-position: 105% 0%;
+        background-size: 400px;
+    }
+
+    @include breakpoint(desktop){
+        background-image: url(../src/assets/hero-img.png);
+        background-repeat: no-repeat;
+        background-position: 101% 0%;
+        background-size: 490px;
+    }
+
+    @include breakpoint(desktopxl) {
+        background-image: url(../src/assets/hero-img.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 500px;
+    }
+}
+
+
+.container {
+    margin: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1280px;
+    @include breakpoint(tablet){
+        padding-left: 40px;
+        padding-right: 39px;
+    }
+
+    @include breakpoint(tablethorizontal) {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    @include breakpoint(desktopxl) {
+        padding-left: 80px;
+        padding-right: 80px;
+        overflow: hidden;
+        
+    
+    }
+}
+ 
+
+img {
+    max-width: 100%;
+}

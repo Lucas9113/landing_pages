@@ -1,0 +1,40 @@
+
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+// breakpoints
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+
+
+//variables for fonts:
+$font-primary: "Plus Jakarta Sans", sans-serif;
+
+
+// color buttons
+$color-btn: #264065;
+
+//colors
+$blue-gray:#666CA3;
+$dark-blue:#13183F;
+$grey:#83869A;
+$pink:#F74780;
+$light-pink:#FFA7C3;
+$pink-fluo:#f02AA6;
+$orange:#ff6f48;
+$blue-violet:#4851FF;
+$buton-header-hover:#666CA3;
+
+
+
+
+
+
+
+//Gradients
+$gradient-orange-pink:linear-gradient(80deg, #FF6F48 0.04%, #F02AA6 100%);
+$gradient-blue-pink:linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+

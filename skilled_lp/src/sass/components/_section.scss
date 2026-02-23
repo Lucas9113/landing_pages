@@ -1,0 +1,129 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.services {
+    display: flex;
+    padding-bottom: 40px;
+     @include breakpoint(tablet){
+        padding-bottom: 40px;
+     }
+    background-image:linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+
+    
+    
+    &__content {
+     width: 100%;
+     @include gradient-orange-pink;
+     border-radius: 12px;
+     padding:24px 29px 30px 28px;
+     margin-bottom: 40px;
+        @include breakpoint(tablet){
+         padding:76px 21px 139px 32px;
+        }
+
+
+    }
+
+    &__principal-title {
+        font-family: $font-primary;
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 32px;
+        margin: 0;
+        padding: 0;
+        @include breakpoint(desktop) {
+            font-size: 32px;
+        }
+
+    }
+
+    &__courses {
+        background-color: white;
+        position: relative;
+        margin-bottom: 40px;
+        padding: 56px 28px 32px 28px;
+        border-radius: 12px;
+
+
+        &-title {
+            font-family: $font-primary;
+            font-size: 20px;
+            font-weight: 800;
+            color:$dark-blue;
+            padding: 0;
+            margin-top: 24px;
+            margin-bottom: 16px;
+
+        }
+
+
+        &-description {
+            width: 90%;
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            color: $grey;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 24px;
+        }
+        
+        a.button-link {
+            font-family: $font-primary;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 28px;
+            color:$pink-fluo;
+            text-decoration: none;
+        }
+    }
+    
+    &__courses-icon {
+        position: absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        background-image:$gradient-orange-pink;
+        border-radius: 50%;
+        top:-9%;
+        
+        
+        
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+
+    .container {
+        @include breakpoint(tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            column-gap: 10px;
+            row-gap: 56px;
+        }
+
+
+        @include breakpoint(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 80px 30px
+        }
+
+        @include breakpoint(desktopxl) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding-top: 40px;
+        }
+
+
+    }
+
+
+}

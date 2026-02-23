@@ -1,0 +1,85 @@
+@use '../abstracts/variables' as *;
+
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+
+// mixin for buttons
+@mixin button {
+  text-decoration: none;
+  background-color:$dark-blue;
+  color: white;
+  font-family: $font-primary;
+  padding: 11px 22px 11px 22px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin gradient-orange-pink {
+  text-decoration: none;
+  color: white;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 37px 15px 37px;
+  border-radius: 31px;
+  background-image: $gradient-orange-pink;
+
+  &:hover{
+    background: var(--Gradient-1-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+  }
+
+
+}
+
+@mixin gradient-blue-pink {
+  text-decoration: none;
+  color: white;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 37px 15px 37px;
+  border-radius: 31px;
+  background-image: $gradient-blue-pink;
+
+  &:hover {
+    background: var(--Gradient-2-Hover, linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%));
+  }
+
+
+}
+  
+
+
+// mixin for standar list style
+@mixin list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+

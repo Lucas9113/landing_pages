@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header-principal {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    @include breakpoint(tablet) {
+        padding-bottom:20px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include breakpoint(tablet) {
+        padding-right:80px;
+
+        @include breakpoint(desktopxl) {
+          padding-top: 15px;  
+          padding-bottom: 15px
+        }
+    }
+
+
+        .nav-principal {
+
+            ul {
+                @include list;
+
+                li {
+                  a.button {
+                      @include button;
+
+                      &:hover{
+                         background-color: $buton-header-hover;
+                      }
+                    
+
+                    }
+                }
+                
+            }
+        }
+
+
+    }
+}

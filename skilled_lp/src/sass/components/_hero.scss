@@ -1,0 +1,166 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+
+.hero {
+    margin-bottom: 66px;
+
+    
+    &__title {
+        font-size: 40px;
+        font-family: $font-primary;
+        font-weight: 800;
+        margin: 0;
+        margin-bottom: 26px;
+    }
+    
+    &__description {
+        font-family: $font-primary;
+        color:$grey;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 34px;
+        margin: 0;
+        margin-bottom: 36px;
+    }
+    
+    &__buttons {
+        margin-bottom: 86px;
+        a.button-gradient-orange {
+            @include gradient-orange-pink;
+            
+        }
+        
+    } 
+    
+    &__img {
+        width: 85%;
+        margin-left: 10%;
+        position: relative;
+        @include breakpoint(tablet){
+            width: 50%;
+            margin: 0;
+        } 
+    }
+
+    
+    &__datos {
+        display: inline-block;
+        text-align: left;
+        width: max-content;
+        background-color: white;
+        font-family: $font-primary;
+        border-radius: 16px;
+        padding: 5px;
+        box-shadow:  0 34px 54px 0 rgba(6, 22, 141, 0.16);
+        
+        span {
+            display: block;
+        }
+        
+        &-title {
+            font-size: 14px;
+            color: $grey;
+            font-weight: 700;
+            line-height: 28px;
+        }
+        
+        &-number {
+            font-size: 32px;
+            font-weight: 800;
+        }
+        
+        &-1 {
+            position:absolute;
+            top:0;
+            right:-20px;
+            padding: 16px 20px 16px 20px;
+            @include breakpoint(tablet){
+                right: -20px;
+            }
+
+            @include breakpoint(desktop){
+                right: 17px;
+                top: 113px;
+            }
+
+            @include breakpoint(desktopxl) {
+                right:-50px;
+                top: 90px;
+            }
+
+        }
+        
+        &-2 {
+            padding: 16px 45px 16px 20px;
+            position:absolute;
+            bottom:0;
+            left:-35px;
+            @include breakpoint(tablet){
+                left:-20px;
+                bottom: -5px;
+            }
+
+            @include breakpoint(tablethorizontal){
+                left:-10px;
+                bottom: -50px;
+            }
+
+            @include breakpoint(desktop){
+                left: 72px;
+                bottom: 49px;
+                
+            }
+
+            @include breakpoint(desktopxl) {
+                left: 180px;
+                bottom: 20px;
+            }
+
+
+        }
+    }
+
+    &__img-mobile {
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    
+    
+    .container {
+        @include breakpoint(tablet) {
+            display:flex;
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+
+        @include breakpoint(tablethorizontal) {
+            display:flex;
+            justify-content: space-between;
+            padding-bottom: 95px;
+        }
+
+        @include breakpoint(desktop) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    &__content {
+        @include breakpoint(tablet){
+            display: flex;
+            flex-direction: column;
+            padding-top: 35px;
+            width: 95%;
+            
+        }
+
+        @include breakpoint(desktop){
+            width: 45%;
+            padding-top: 90px;
+        }
+        
+    }
+}
