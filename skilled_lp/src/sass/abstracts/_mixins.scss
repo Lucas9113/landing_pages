@@ -25,6 +25,11 @@
       @content;
     }
   }
+  @if $bp == desktopxxl {
+    @media (min-width: $bp-desktop-xxl) {
+      @content;
+    }
+  }
 }
 
 
